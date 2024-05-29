@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="50"
+   height="22.950819"
+   viewBox="0 0 50 22.950819"
+   sodipodi:docname="arrow_long.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="57.632045"
+     inkscape:cx="2.49861"
+     inkscape:cy="2.1255536"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1">
+    <sodipodi:guide
+       position="1499.3802,384.46933"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <path
+       style="fill:#f96400;fill-opacity:1;stroke-width:0.0328327"
+       d="M 11.14472,22.918167 C 10.895401,22.835609 10.811064,22.768333 10.305501,22.248686 8.2683612,20.154803 0.01034047,11.529762 0.01034047,11.495965 c 0,-0.02323 2.42902773,-2.5699814 5.39783863,-5.6594583 6.0508349,-6.29677073 5.5354489,-5.80143666 6.0321439,-5.7974492 0.418595,0.0033639 0.705195,0.17590328 0.905555,0.54517468 0.101594,0.18724188 0.112631,0.23332178 0.112609,0.47015082 -2.4e-5,0.2146073 -0.01562,0.2955361 -0.08545,0.4430781 -0.07093,0.1498795 -0.799623,0.9241073 -4.2937376,4.562056 l -4.2083095,4.3815409 22.6868421,0.01641 22.686842,0.01641 c 0.284111,0.112382 0.517692,0.296579 0.663718,0.568936 0.119903,0.244898 0.129341,0.628238 0.02123,0.862775 -0.126823,0.292391 -0.382895,0.461186 -0.652111,0.603165 l -22.707989,0.01641 -22.7079921,0.01641 4.2086978,4.38154 c 3.3801513,3.51897 4.2262123,4.416881 4.2976633,4.561059 0.183176,0.369608 0.09583,0.863336 -0.206077,1.165032 -0.249745,0.249562 -0.708953,0.370997 -1.017094,0.268962 z"
+       id="path1"
+       sodipodi:nodetypes="ssssssssscccsscccssss"
+       inkscape:export-filename="arrow_long-orange.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
