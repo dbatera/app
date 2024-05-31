@@ -1,28 +1,334 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');     
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 /* reseat */
-body{
-    background-color: #222;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    text-align: center;
-    gap: 50px;
+/* https://coolors.co/f96400-151518-0c0c0d-1f1f22-3a3a3b PALETA DE CORES ORANGE GREY */ 
+:root{
+  --h1: "Bebas Neue", sans-serif;
+  --orange-pantone: #f96400ff;
+  --night: #151518ff;
+  --night-2: #0c0c0dff;
+  --raisin-black: #1f1f22ff;
+  --onyx: #3a3a3bff;
+  /* CORES */
+  --roboto: "Roboto", sans-serif;
+  --freeman: "Freeman", sans-serif;
+  /* FONTES */
 }
-p{
-    background-color: black;
-    padding: 30px;
-    position: absolute;
-    bottom: 0;
-    min-height: 80vh;
-    border-radius: 10px 10px 0 0;
+body{
+  background-color: var(--orange-pantone);
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+  font-family: sans-serif;
+  /* color: white; */
+}
+p, button{
+  font-family: var(--roboto);
+}
+button{
+  font-weight: 500;
+}
+h2{
+  font-family: var(--h1);
+}
+ul{
+  list-style: none;
+  font-family: var(--roboto);
+}
+li{
+  margin-bottom: 5px;
 }
 /* global */
+.cabecalho{
+  position: absolute;
+  padding: 50px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 30px;
+  background-color: var(--orange-pantone);
+  width: 100%;
+}
+.cabecalho h1{
+  font-size: 5.7em;
+  font-family: var(--h1);
+  text-transform: uppercase;
+  color: var(--night-2);
+  line-height: .8em;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+.cabecalho button{
+  border: none;
+  background-color: var(--orange-pantone);
+  border: 2px solid var(--night-2);
+  color: var(--night-2);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: var(--h1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.cabecalho img{
+  width: 50px;
+  transform: rotate(180deg);
+  margin-left: 10px;
+}
+/* Definindo a animação de slide de baixo para cima */
+@keyframes slideUp {
+  from {
+    transform: translatex(100%); opacity: 0;
+  }
+  to {
+    transform: translatex(0); opacity: 10;
+  }
+}
+
+/* Definindo a animação de slide de cima para baixo */
+@keyframes slideDown {
+  from {
+    transform: translateX(0); opacity: 10;
+  }
+  to {
+    transform: translateX(100%); opacity: 0; 
+  }
+}
+  /* Aplicando a animação ao parágrafo e ao botão */
+  #menu {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  bottom: 0;
+  background-color: var(--night);
+  color: white;
+  padding: 0 20px 20px 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: slideUp 1s ease-in-out forwards;
+}
+/* Estilizando o botão de fechar */
+.fechar {
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+}
+
+.fechar img{
+  cursor: pointer;
+  margin: 20px 0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 2px solid var(--orange-pantone);
+  -webkit-tap-highlight-color: none;
+  background-color: var(--night-2);
+}
+.fechar-z{
+  z-index: -1;
+}
+/* .fa-arrow-left{
+  color: white;
+  margin: 20px 0;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  border: 2px solid var(--orange-pantone);
+  -webkit-tap-highlight-color: none;
+  background-color: var(--night-2);
+} */
+.menu-card{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  text-align: center;
+}
+.btn-info{
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: var(--night-2);
+  border: 2px solid var(--orange-pantone);
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.3em;
+}
+.btn-acao{
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  color: var(--night);
+  background-color: var(--orange-pantone);
+  border: 2px solid var(--night-2);
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.3em;
+}
+.btn-acao a{
+  color: var(--night);
+}
+#info-conteudo, #alunos-conteudo, #prof-conteudo{
+  display: none;
+  background-color: var(--night);
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 20px;
+  width: 100%;
+}
+.img-prof{
+  width: 100%;
+  border-radius: 5px;
+  /* border: 2px solid var(--orange-pantone); */
+}
+#prof-conteudo h2{
+  border-bottom: 2px solid var(--orange-pantone);
+  padding-bottom: 5px;
+}
+#loc-conteudo, #cont-conteudo, #horario-conteudo{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  background-color: var(--night);
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px 20px;
+  width: 100%;
+  gap: 15px;
+}
+#horario-conteudo h2, #cont-conteudo h2{
+  border-bottom: 2px solid var(--orange-pantone);
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+.container-horario, .container-quantidade, .container-duracao, .container-conteudo{
+  margin-bottom: 20px;
+  /* padding: 20px; */
+  width: 90%;
+}
+#cont-conteudo .fa-check{
+  color: var(--orange-pantone);
+  font-weight: 900;
+}
+
+.iframe-container {
+position: relative;
+width: 100%;
+height: 60vh;
+}
+/* IFRAME LOADER */
+#iframeLoader {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+/* background: rgba(0, 0, 0, 0.7); */
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+border-radius: 10px;
+}
+/* fim iframe loader */
+
+/* ---------PAGE LOADER------------- */
+@keyframes fadeOut {
+from {
+  opacity: 1;
+}
+to {
+  opacity: 0;
+}
+}
+
+#loader {
+display: flex;
+flex-direction: column;
+gap: 30px;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: var(--orange-pantone);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+}
+.spinner {
+border: 8px solid var(--night-2);
+border-top: 8px solid rgba(255, 255, 255, 0.185);
+border-radius: 50%;
+width: 60px;
+height: 60px;
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+.hidden {
+animation: fadeOut 1s forwards;
+pointer-events: none;
+}
+/* FIM LOADER */
+
+
+/* PC */
+@media only screen and (min-width: 750px) {
+
+.cabecalho h1{
+max-width: 50%;
+}
+.logo{
+width: 40%;
+}
+#menu{
+width: 50%;
+right: -50%;
+}
+#menu img{
+transform: rotate(180deg);
+}
+#horario-conteudo{
+width: 100%;
+}
+}
+::-webkit-scrollbar {
+display: none;
+}
