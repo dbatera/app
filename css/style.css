@@ -39,16 +39,9 @@ button{
 h2{
   font-family: var(--h1);
 }
-ul{
-  list-style: none;
-  font-family: var(--roboto);
-}
-li{
-  margin-bottom: 5px;
-}
 /* global */
 .cabecalho{
-  position: absolute;
+  position: fixed;
   padding: 50px 20px;
   min-height: 100vh;
   display: flex;
@@ -91,20 +84,20 @@ li{
 /* Definindo a animação de slide de baixo para cima */
 @keyframes slideUp {
   from {
-    transform: translatex(100%); opacity: 0;
+    transform: translatex(100%); ;
   }
   to {
-    transform: translatex(0); opacity: 10;
+    transform: translatex(0); ;
   }
 }
 
 /* Definindo a animação de slide de cima para baixo */
 @keyframes slideDown {
   from {
-    transform: translateX(0); opacity: 10;
+    transform: translateX(0);
   }
   to {
-    transform: translateX(100%); opacity: 0; 
+    transform: translateX(100%); 
   }
 }
   /* Aplicando a animação ao parágrafo e ao botão */
@@ -113,7 +106,7 @@ li{
   min-height: 100vh;
   position: relative;
   bottom: 0;
-  background-color: var(--night);
+  background-color: var(--night-2);
   color: white;
   padding: 0 20px 20px 20px;
   display: none;
@@ -145,16 +138,6 @@ li{
 .fechar-z{
   z-index: -1;
 }
-/* .fa-arrow-left{
-  color: white;
-  margin: 20px 0;
-  border-radius: 100px;
-  padding: 10px 20px;
-  font-size: 1.5em;
-  border: 2px solid var(--orange-pantone);
-  -webkit-tap-highlight-color: none;
-  background-color: var(--night-2);
-} */
 .menu-card{
   display: flex;
   flex-direction: column;
@@ -203,12 +186,32 @@ li{
   padding: 50px 20px;
   width: 100%;
 }
+#cont-conteudo h2{
+  text-align: center;
+}
+#cont-conteudo ul{
+  list-style: none;
+  font-family: var(--roboto);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+#cont-conteudo li{
+  padding: 20px;
+  border-radius: 100px;
+  background-color: var(--onyx);
+  min-width: 300px;
+  text-align: center;
+}
+/* CONTEURDO */
 .img-prof{
   width: 100%;
   border-radius: 5px;
   /* border: 2px solid var(--orange-pantone); */
 }
-#prof-conteudo h2{
+#prof-conteudo h2, #alunos-conteudo h2{
   border-bottom: 2px solid var(--orange-pantone);
   padding-bottom: 5px;
 }
@@ -232,9 +235,11 @@ li{
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
-.container-horario, .container-quantidade, .container-duracao, .container-conteudo{
+.container-horario, .container-quantidade, .container-duracao{
   margin-bottom: 20px;
-  /* padding: 20px; */
+  padding: 20px;
+  background-color: var(--onyx);
+  border-radius: 20px;
   width: 90%;
 }
 #cont-conteudo .fa-check{
@@ -311,19 +316,34 @@ pointer-events: none;
 
 /* PC */
 @media only screen and (min-width: 750px) {
-
+  .cabecalho{
+    padding: 0;
+  }
+  .cabecalho-bg{
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 20px;
+    background: url(../imagens/drums-bg.png) no-repeat;
+    background-position: right bottom;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }  
 .cabecalho h1{
 max-width: 50%;
+text-shadow: 2px 2px var(--orange-pantone), -2px -2px var(--orange-pantone);
 }
-.logo{
-width: 40%;
+.cabecalho button{
+  width: max-content;
+  box-shadow: 2px 2px var(--orange-pantone), -1px -1px var(--orange-pantone);
+
 }
 #menu{
 width: 50%;
 right: -50%;
 }
 #menu img{
-transform: rotate(180deg);
+/* transform: rotate(180deg); */
 }
 #horario-conteudo{
 width: 100%;
