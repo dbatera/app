@@ -36,7 +36,7 @@ p, button{
 button{
   font-weight: 500;
 }
-h2{
+h2, h3{
   font-family: var(--h1);
 }
 /* global */
@@ -172,7 +172,7 @@ h2{
 .btn-acao a{
   color: var(--night);
 }
-#info-conteudo, #alunos-conteudo, #prof-conteudo{
+#info-conteudo, #alunos-conteudo, #prof-conteudo, #valor-conteudo{
   display: none;
   background-color: var(--night);
   min-height: 100vh;
@@ -186,6 +186,37 @@ h2{
   padding: 50px 20px;
   width: 100%;
 }
+.valor-card{
+    padding-top: 20px;
+    border-radius: 20px;
+    background: var(--onyx);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+.valor-numerico-container{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.valor-card h3{
+  color: var(--orange-pantone);
+  font-size: 2em;
+}
+.valor-card span{
+  border: 2px solid var(--orange-pantone);
+  padding: 5px;
+  border-radius: 5px;
+}
+.btn-acao-vaga-card{
+  background-color: var(--night-2);
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+/* VALORES */
 #cont-conteudo h2{
   text-align: center;
 }
@@ -211,7 +242,7 @@ h2{
   border-radius: 5px;
   /* border: 2px solid var(--orange-pantone); */
 }
-#prof-conteudo h2, #alunos-conteudo h2{
+#prof-conteudo h2, #alunos-conteudo h2, #valor-conteudo h2{
   border-bottom: 2px solid var(--orange-pantone);
   padding-bottom: 5px;
 }
@@ -259,7 +290,6 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-/* background: rgba(0, 0, 0, 0.7); */
 display: flex;
 align-items: center;
 justify-content: center;
@@ -269,15 +299,6 @@ border-radius: 10px;
 /* fim iframe loader */
 
 /* ---------PAGE LOADER------------- */
-@keyframes fadeOut {
-from {
-  opacity: 1;
-}
-to {
-  opacity: 0;
-}
-}
-
 #loader {
 display: flex;
 flex-direction: column;
@@ -311,6 +332,14 @@ animation: spin 1s linear infinite;
 animation: fadeOut 1s forwards;
 pointer-events: none;
 }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+  }
 /* FIM LOADER */
 
 
@@ -323,12 +352,18 @@ pointer-events: none;
     width: 100%;
     min-height: 100vh;
     padding: 50px 20px;
-    background: url(../imagens/drums-bg.png) no-repeat;
+    background: url(../imagens/drums-bg-2.png) no-repeat;
     background-position: right bottom;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    animation-duration: 1s;
+    transition-timing-function: ease-in-out;
   }  
+  @keyframes bg-ampliar {
+    0%{background-size: 70%;}
+    100%{background-size: 826px;}
+  }
 .cabecalho h1{
 max-width: 50%;
 text-shadow: 2px 2px var(--orange-pantone), -2px -2px var(--orange-pantone);

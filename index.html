@@ -24,12 +24,14 @@
           loader.style.display = "none";
           document.body.style.overflow = "auto"; // Permitir rolagem após carregamento
         }, 1000); // Tempo igual à duração da animação fadeOut
+        var container = document.getElementById("cabecalho-bg");
+        container.style.animationName = "bg-ampliar";
       }
     </script><!-- LOADER -->
 
 
     <header class="cabecalho">
-      <div class="cabecalho-bg">
+      <div class="cabecalho-bg" id="cabecalho-bg">
         <h1>aulas de bateria londrina</h1>
         <button onclick="mostrarMenu()">Start <img src="imagens/arrow_long.png" alt=""></button>
       </div>
@@ -163,7 +165,21 @@
           <button class="fechar" onclick="fecharProf()"><img src="imagens/arrow_long-orange.png" alt=""></button> 
         </div>
         <!-- PROFESSOR -->
-
+        <button class="btn-info" onclick="mostrarValor()"><i class="fa-solid fa-sack-dollar"></i>  Valores</button>
+        <div id="valor-conteudo">
+          <div class="valor-card">
+            <h2>Mensalidades a partir de</h2>
+          <div class="valor-numerico-container">
+            <h3>175</h3><p>Reais</p>
+          </div>
+          <p>Restão apenas <span class="vagas">4</span> vagas</p>
+          <div class="btn-acao-vaga-card">
+            <button class="btn-acao"><a href="https://api.whatsapp.com/send/?phone=554399667284&text&type=phone_number&app_absent=0"><i class="fa-solid fa-rocket"></i>  Garantir minha Vaga</a></button>
+          </div>
+          </div> 
+          <button class="fechar" onclick="fecharValor()"><img src="imagens/arrow_long-orange.png" alt=""></button>
+        </div>
+        <!-- VALORES -->
         <button class="btn-acao"><a href="https://api.whatsapp.com/send/?phone=554399667284&text&type=phone_number&app_absent=0"><i class="fa-solid fa-rocket"></i>  Agendar Aula</a></button>
       </div>  
       <button class="fechar fechar-z" onclick="fecharMenu()"><img src="imagens/arrow_long-orange.png" alt=""></button>
@@ -239,6 +255,24 @@
       }
     </script>
     <!-- MOSTRA/FECHA PROF -->
+
+    <script>
+      function mostrarValor() {
+        var container = document.getElementById("valor-conteudo");
+        container.style.animation = "slideUp .5s ease-in-out forwards";
+        container.style.display = "flex";
+      }
+
+      function fecharValor() {
+        var container = document.getElementById("valor-conteudo");
+        container.style.animation = "slideDown .5s ease-in-out forwards";
+        setTimeout(function() {
+          container.style.display = "none";
+          container.style.animation = "none"; // Limpa a animação para evitar repetição ao abrir novamente
+        }, 500); // Tempo igual à duração da animação
+      }
+    </script>
+    <!-- MOSTRA/FECHA VALORES -->
 
     <!-- SUB MENU -->
     <script>
